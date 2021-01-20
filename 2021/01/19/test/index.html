@@ -288,16 +288,16 @@
 
   
   <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//billts.site/extra_css/gitment.css">
-<script src="//billts.site/js/gitment.js"></script>
+<link rel="stylesheet" href="//pandongxia.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://example.com/2021/01/19/test/",
-  owner: 'pandongxia',
-  repo: 'pandongxia.github.io',
+  id: "<%=url%>",
+  owner: '<%=theme.gitment_owner%>',
+  repo: '<%=theme.gitment_repo%>',
   oauth: {
-    client_id: '3d12f923f94d1424cfdb',
-    client_secret: '876d26ecb03c935904132fb234b00c65f12558ff',
+    client_id: '<%=theme.gitment_oauth.client_id%>',
+    client_secret: '<%=theme.gitment_oauth.client_secret%>',
   },
 })
 gitment.render('gitment-ctn')
