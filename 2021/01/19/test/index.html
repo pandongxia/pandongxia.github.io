@@ -146,7 +146,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-test" class="article article-type-post  itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -238,6 +238,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/01/20/ubuntu-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ubuntu hexo
+        
+      </div>
+    </a>
+  
   
     <a href="/2021/01/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
@@ -287,21 +296,29 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
+  
+      <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
-var gitment = new Gitment({
-  id: "http://example.com/2021/01/19/test/",
-  owner: 'pandongxia',
-  repo: 'pandongxia.github.io',
-  oauth: {
-    client_id: '3d12f923f94d1424cfdb',
-    client_secret: '876d26ecb03c935904132fb234b00c65f12558ff',
-  },
-})
-gitment.render('gitment-ctn')
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV,
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'BY0p53Qaak7rD1iuufPaTKdO-gzGzoHsz',
+      app_key: 'HAmQCDKaDdJDa3gzXCowPwVk',
+      placeholder: 'Just go go'
+    });
 </script>
+
 
   
 
